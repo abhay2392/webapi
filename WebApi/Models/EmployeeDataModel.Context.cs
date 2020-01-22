@@ -26,5 +26,6 @@ namespace WebApi.Models
         }
     
         public virtual DbSet<Employee> Employees { get; set; }
+        public virtual DbSet<EmployeeCredential> EmployeeCredentials { get; set; }
     }
 }

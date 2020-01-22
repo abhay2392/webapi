@@ -41,7 +41,7 @@ namespace WebApi.Controllers
             }
         }
      
-        [Route("api/Employee/getSalary")]
+        [Route("api/getSalary")]
         [HttpGet]
         public IEnumerable<string> SalaryData()
         {

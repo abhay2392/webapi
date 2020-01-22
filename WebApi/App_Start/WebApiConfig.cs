@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 using System.Web.Http.Cors;
+using WebApi.Filters;
+
 
 namespace WebApi
 {
@@ -23,6 +25,9 @@ namespace WebApi
 
             EnableCorsAttribute cors = new EnableCorsAttribute("*","*","*");
             config.EnableCors();
+
+            config.Filters.Add(new RequireHttpsAttribute());
+            config.Filters.Add(new BasicLoginAttribute());
 
 
 
